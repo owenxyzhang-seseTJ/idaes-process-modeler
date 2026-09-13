@@ -1,0 +1,8 @@
+metric,value,source_page
+permeate_m3_day,28.4,1
+salt_rejection_fraction,0.998,1
+feed_NaCl_ppm,32000.0,1
+area_m2,37.0,1
+pressure_bar,55.0,1
+temperature_C,25.0,1
+recovery_fraction,0.08,1

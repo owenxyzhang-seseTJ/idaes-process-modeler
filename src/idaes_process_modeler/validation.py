@@ -55,6 +55,7 @@ class ValidationReport:
 
 
 SUPPORTED_MODEL_TYPES = {
+    "seawater_ro",
     "gate_open_psa",
     "fixed_bed_adsorption",
     "psa",
@@ -193,6 +194,15 @@ def validate_spec(source: Any) -> ValidationReport:
         spec = load_spec(source)
     except Exception as exc:
         report.error("spec", str(exc))
+        return report
+
+    if spec.model_type == 'seawater_ro':
+        from .models.seawater_ro import parameters
+        try:
+            parameters(spec)
+        except (ValueError, TypeError, KeyError) as exc:
+            report.error('seawater_ro', str(exc))
+        report.warning('validation', 'NaCl-equivalent RO; manufacturer calibration is not independent validation')
         return report
 
     if spec.model_type == 'gate_open_psa':

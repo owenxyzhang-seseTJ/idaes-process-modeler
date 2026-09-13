@@ -234,6 +234,56 @@ coupling.
 
 ## Reports and rendered artifacts / 报告与渲染文件
 
+### Seawater reverse osmosis / 海水反渗透脱盐
+
+The aqueous `seawater_ro` demo uses **actual manufacturer nominal test data**
+from the [DuPont SW30HRLE-400 January 2026 data sheet](https://www.dupont.com/content/dam/dupont/amer/us/en/water-solutions/public/documents/en/RO-FilmTec-SW30HRLE-400-PDS-45-D00967-en.pdf):
+37 m², 32,000 ppm NaCl, 55 bar, 25°C, 8% recovery, 28.4 m³/day permeate,
+and 99.8% stabilized salt rejection. The source is a product specification,
+not a raw experimental dataset. Its URL, revision, page, transcription and
+SHA-256 are recorded with the demo.
+
+水相 `seawater_ro` demo 采用杜邦官方标称测试数据，先标定水与盐的透过系数，再预测
+六支膜串联的性能。包含溶解扩散、渗透压、浓差极化、轴向浓缩和指定压降。SciPy
+参考积分与 IDAES FlowsheetBlock 上的自定义 Pyomo/IPOPT 方程求解相互对照。
+它不调用 WaterTAP 原生单元；拟合标称点也不等于独立实验验证。
+
+```bash
+conda run -n idaes-process python scripts/run_seawater_ro_demo.py
+python scripts/render_reports.py --only seawater_ro_report
+# General CLI: reference integration / 通用命令行参考积分
+idaes-model run assets/templates/seawater_ro.yaml --output-dir runs/seawater_ro
+```
+
+Baseline scenario: 6 × 37 m², 60 bar, 32 g/L NaCl, 25°C, and 14.7917 m³/h
+feed. Predicted product is approximately **146.6 m³/day**, recovery **41.3%**,
+and mixed product NaCl **92.2 mg/L**. RO pressure-work electricity is about
+**4.75 kWh/m³** without energy recovery or **2.14 kWh/m³** with an assumed
+95%-efficient pressure exchanger and 85%-efficient pump. These estimates
+exclude intake, pretreatment, post-treatment and auxiliary power.
+
+基准预测：产水约 **146.6 m³/天**，回收率 **41.3%**，产水 NaCl 约 **92.2 mg/L**。
+高压泵能耗估算为无回收 **4.75 kWh/m³**，假设配置压力交换器时 **2.14 kWh/m³**。
+报告给出压力扫描、传质/渗透压/压降假设敏感性、水盐衡算及 30/60/120 格收敛。
+浓度按恒密度将 ppm 近似换算为 kg/m³，传质和渗透系数为明确的情景假设。
+
+This is NaCl-equivalent seawater, not a multi-ion seawater chemistry model.
+It cannot predict Li/Mg or Na/Mg selectivity, boron removal, scaling, fouling,
+or drinking-water compliance. Those extensions need ion-resolved data and
+thermodynamic/transport models.
+
+本例为等效 NaCl 脱盐，不代表真实海水的全部离子化学；不能据此判断 Li/Mg 选择性、
+硼去除、结垢、污染或饮水合格。水相离子选择性分离需另建对应传输与热力学模型。
+
+- [Input template / 输入模板](assets/templates/seawater_ro.yaml)
+- [Source transcription / 厂商数据转录](demo_results/seawater_ro/manufacturer_data.csv)
+- [Bilingual report / 中英文报告](demo_results/seawater_ro/report.md)
+- [Rendered PDF / 公式排版 PDF](output/pdf/reports/seawater_ro_report.pdf)
+- [Results figure / 结果图](demo_results/seawater_ro/figures/ro_performance.png)
+- [Convergence / 数值验证](demo_results/seawater_ro/convergence.json)
+
+### Report index / 报告索引
+
 The main reports are available in both Markdown and rendered PDF form:
 
 主要报告同时提供 Markdown 和渲染后的 PDF：

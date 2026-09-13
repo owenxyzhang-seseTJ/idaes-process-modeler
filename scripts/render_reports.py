@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 import subprocess
@@ -20,6 +21,7 @@ CONTACT_SHEET = ROOT / "output" / "preview" / "report_contact_sheet.png"
 TMP_ROOT = ROOT / "tmp" / "pdfs"
 
 REPORTS = (
+    ("seawater_ro_report", "demo_results/seawater_ro/report.md"),
     ("demo_technical_report", "demo_results/technical_report/demo_technical_report.md"),
     ("gate_open_thermal_psa_report", "demo_results/gate_open_thermal_psa/report.md"),
     ("technical_report_figure_plan", "demo_results/technical_report/figure_plan.md"),
@@ -62,6 +64,8 @@ def latex_wrapper(source_name: str) -> str:
 \setlength{{\emergencystretch}}{{3em}}
 \hypersetup{{hidelinks}}
 \sloppy
+\widowpenalty=10000
+\clubpenalty=10000
 \makeatletter
 \def\markdownLaTeXRenderTableRow#1{{%
   \markdownLaTeXColumnCounter=0%
@@ -216,6 +220,9 @@ def build_contact_sheet(records: list[dict]) -> None:
 def main() -> None:
     """Render all maintained reports and write a path-portable manifest."""
 
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--only', choices=[stem for stem, _ in REPORTS])
+    args = parser.parse_args()
     PDF_ROOT.mkdir(parents=True, exist_ok=True)
     PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
     if TMP_ROOT.exists():
@@ -224,7 +231,13 @@ def main() -> None:
     records: list[dict] = []
     try:
         for stem, source_rel in REPORTS:
+            if args.only and stem != args.only:
+                continue
             records.append(render_one(stem, source_rel))
+        previous_manifest = PREVIEW_ROOT.parent / 'report_render_manifest.json'
+        if args.only and previous_manifest.exists():
+            previous = json.loads(previous_manifest.read_text(encoding='utf-8'))
+            records = [r for r in previous['reports'] if Path(r['pdf']).stem != args.only] + records
         build_contact_sheet(records)
     finally:
         shutil.rmtree(TMP_ROOT, ignore_errors=True)

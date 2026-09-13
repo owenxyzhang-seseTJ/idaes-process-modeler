@@ -12,6 +12,8 @@ dependencies = [
   "scipy>=1.8",
   "pandas>=1.4",
   "matplotlib>=3.5",
+  "pillow>=9.0",
+  "pypdf>=3.0",
   "PyYAML>=6.0"
 ]
 

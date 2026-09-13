@@ -78,6 +78,10 @@ simulation “validated” without the corresponding evidence.
 
 ## Model routing
 
+- Aqueous reverse osmosis / seawater desalination → `references/aqueous-ro.md`;
+  use the sourced `seawater_ro` template, solution diffusion, osmotic pressure
+  and film polarization. Distinguish nominal-data calibration from independent
+  validation and NaCl-equivalent desalination from ion-specific separation.
 - Fixed-bed adsorption → `references/adsorption.md`, then the fixed-bed
   template/backend. Support convection, axial dispersion, gas accumulation,
   adsorption storage, LDF/dual resistance, selectable isotherms, Ergun

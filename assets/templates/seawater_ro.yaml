@@ -1,0 +1,36 @@
+model_type: seawater_ro
+components: [H2O, NaCl]
+backend: scipy_reference_and_pyomo_idaes_flowsheet
+# All scalar parameters below carry explicit units in their keys.
+# Classification: required input; source categories defined in provenance.
+parameters:
+  temperature_K: 298.15
+  feed_salt_kg_m3: 32.0
+  feed_flow_m3_h: 14.7916666666667
+  pressure_bar: 60.0
+  permeate_pressure_bar: 0.0
+  element_area_m2: 37.0
+  elements: 6
+  pressure_drop_bar_per_element: 0.15
+  mass_transfer_m_h: 0.15
+  osmotic_coefficient: 0.93
+  pump_efficiency: 0.85
+  energy_recovery_efficiency: 0.95
+  cells: 120
+calibration:
+  pressure_bar: 55.0
+  recovery: 0.08
+  permeate_m3_day: 28.4
+  rejection: 0.998
+  element_area_m2: 37.0
+  feed_salt_kg_m3: 32.0
+provenance:
+  manufacturer: DuPont FilmTec SW30HRLE-400, 45-D00967-en Rev.8, January 2026, page 1
+  source_url: https://www.dupont.com/content/dam/dupont/amer/us/en/water-solutions/public/documents/en/RO-FilmTec-SW30HRLE-400-PDS-45-D00967-en.pdf
+  source_type: manufacturer_nominal_test_specification_not_raw_experiment
+  sourced_required: [temperature_K, element_area_m2, calibration]
+  derived_required: [feed_flow_m3_h]
+  assumed_required: [elements, pressure_bar, permeate_pressure_bar, pressure_drop_bar_per_element, mass_transfer_m_h, osmotic_coefficient, pump_efficiency, energy_recovery_efficiency]
+  numerical_required: [cells]
+  concentration_conversion: 32000 ppm approximated as 32 kg/m3 under constant density 1000 kg/m3; ppm definition/density uncertainty retained
+  excluded_species: 5 ppm boron at pH 8 in manufacturer test; not modeled or claimed removed

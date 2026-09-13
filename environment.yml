@@ -7,6 +7,9 @@ dependencies:
   - scipy>=1.10
   - pandas>=2.0
   - matplotlib>=3.7
+  - pillow>=9.0
+  - pypdf>=3.0
+  - poppler
   - pyyaml>=6.0
   - pytest>=7.0
   - pyomo>=6.7

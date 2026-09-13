@@ -1,0 +1,59 @@
+{
+  "pyomo": [
+    {
+      "backend": "custom Pyomo equations on IDAES FlowsheetBlock",
+      "solver": "IPOPT",
+      "termination": "optimal",
+      "dof": 0,
+      "cells": 30,
+      "max_equation_residual_engineering_units": 6.21031004399697e-14,
+      "permeate_m3_day": 146.58321131413112,
+      "permeate_mg_L": 92.14414809277451,
+      "recovery": 0.41291045440600227
+    },
+    {
+      "backend": "custom Pyomo equations on IDAES FlowsheetBlock",
+      "solver": "IPOPT",
+      "termination": "optimal",
+      "dof": 0,
+      "cells": 60,
+      "max_equation_residual_engineering_units": 3.6999381336499937e-09,
+      "permeate_m3_day": 146.57649747922068,
+      "permeate_mg_L": 92.15038839147277,
+      "recovery": 0.4128915421949869
+    },
+    {
+      "backend": "custom Pyomo equations on IDAES FlowsheetBlock",
+      "solver": "IPOPT",
+      "termination": "optimal",
+      "dof": 0,
+      "cells": 120,
+      "max_equation_residual_engineering_units": 2.404618726359331e-10,
+      "permeate_m3_day": 146.57481917874657,
+      "permeate_mg_L": 92.15194840833634,
+      "recovery": 0.41288681458801757
+    }
+  ],
+  "reference_refinement_relative": 2.3201252030702335e-10,
+  "pyomo_relative_error": 3.816423665758961e-06,
+  "standard_train_55_bar": {
+    "permeate_m3_day": 128.55029428124715,
+    "recovery": 0.36211350501759676,
+    "permeate_mg_L": 98.21189506663833,
+    "brine_g_L": 50.10991202647232,
+    "rejection": 0.9969308782791676,
+    "sec_no_erd_kWh_m3": 4.963597314128589,
+    "sec_pressure_exchanger_kWh_m3": 2.0049164055338484,
+    "salt_balance_kg_h": -6.061817714453355e-14,
+    "water_balance_kg_h": 9.094947017729282e-13,
+    "volume_balance_m3_h": 8.881784197001252e-16,
+    "feed_osmotic_bar": 25.246497111484413
+  },
+  "linear_six_element_nominal_m3_day": 170.39999999999998,
+  "versions": {
+    "idaes-pse": "2.12.0",
+    "pyomo": "6.10.1",
+    "scipy": "1.17.1",
+    "numpy": "2.4.6"
+  }
+}

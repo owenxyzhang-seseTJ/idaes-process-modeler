@@ -99,6 +99,21 @@
       "page_files": [
         "output/preview/reports/gate_open_thermal_psa_qa_report/page-1.png"
       ]
+    },
+    {
+      "source": "demo_results/seawater_ro/report.md",
+      "pdf": "output/pdf/reports/seawater_ro_report.pdf",
+      "preview_dir": "output/preview/reports/seawater_ro_report",
+      "pages": 5,
+      "text_characters": 4989,
+      "pdf_bytes": 696853,
+      "page_files": [
+        "output/preview/reports/seawater_ro_report/page-1.png",
+        "output/preview/reports/seawater_ro_report/page-2.png",
+        "output/preview/reports/seawater_ro_report/page-3.png",
+        "output/preview/reports/seawater_ro_report/page-4.png",
+        "output/preview/reports/seawater_ro_report/page-5.png"
+      ]
     }
   ],
   "contact_sheet": "output/preview/report_contact_sheet.png"

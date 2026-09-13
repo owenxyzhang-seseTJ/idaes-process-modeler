@@ -10,3 +10,5 @@ runs/*
 # Result snapshots are intentionally versioned for the reproducible demo report.
 # Runtime Slurm jobs are machine-specific and must not be published.
 demo_results/**/*.sbatch
+# Solver logs may contain machine-specific executable and temporary paths.
+demo_results/**/*.log

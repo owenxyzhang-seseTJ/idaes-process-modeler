@@ -1,0 +1,33 @@
+{
+  "provenance": {
+    "manufacturer": "DuPont FilmTec SW30HRLE-400, 45-D00967-en Rev.8, January 2026, page 1",
+    "source_url": "https://www.dupont.com/content/dam/dupont/amer/us/en/water-solutions/public/documents/en/RO-FilmTec-SW30HRLE-400-PDS-45-D00967-en.pdf",
+    "source_type": "manufacturer_nominal_test_specification_not_raw_experiment",
+    "sourced_required": [
+      "temperature_K",
+      "element_area_m2",
+      "calibration"
+    ],
+    "derived_required": [
+      "feed_flow_m3_h"
+    ],
+    "assumed_required": [
+      "elements",
+      "pressure_bar",
+      "permeate_pressure_bar",
+      "pressure_drop_bar_per_element",
+      "mass_transfer_m_h",
+      "osmotic_coefficient",
+      "pump_efficiency",
+      "energy_recovery_efficiency"
+    ],
+    "numerical_required": [
+      "cells"
+    ],
+    "concentration_conversion": "32000 ppm approximated as 32 kg/m3 under constant density 1000 kg/m3; ppm definition/density uncertainty retained",
+    "excluded_species": "5 ppm boron at pH 8 in manufacturer test; not modeled or claimed removed"
+  },
+  "accessed": "2026-09-13",
+  "source_sha256": "a9cbf1641204b79629a27475d6046ab64f6f81bb58227623add05cc30f10ab9c",
+  "method_url": "https://watertap.readthedocs.io/en/stable/technical_reference/unit_models/reverse_osmosis_0D.html"
+}

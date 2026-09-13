@@ -1,0 +1,45 @@
+{
+  "permeate_m3_day": 146.5742597892727,
+  "recovery": 0.4128852388430208,
+  "permeate_mg_L": 92.15246838097991,
+  "brine_g_L": 54.43901894596846,
+  "rejection": 0.9971202353630944,
+  "sec_no_erd_kWh_m3": 4.7489813857718985,
+  "sec_pressure_exchanger_kWh_m3": 2.139925975604472,
+  "salt_balance_kg_h": 2.3869795029440866e-14,
+  "water_balance_kg_h": -9.094947017729282e-13,
+  "volume_balance_m3_h": -8.881784197001252e-16,
+  "feed_osmotic_bar": 25.246497111484413,
+  "model_type": "seawater_ro",
+  "backend": "SciPy DOP853 aqueous solution-diffusion",
+  "solver": {
+    "termination": "success"
+  },
+  "calibration": {
+    "permeate_m3_day": 28.399999999999483,
+    "recovery": 0.07999999999999854,
+    "permeate_mg_L": 64.00000000000125,
+    "brine_g_L": 34.777043478260815,
+    "rejection": 0.998,
+    "sec_no_erd_kWh_m3": 22.467320261438317,
+    "sec_pressure_exchanger_kWh_m3": 2.884436274509826,
+    "salt_balance_kg_h": 1.2878587085651816e-14,
+    "water_balance_kg_h": 4.547473508864641e-13,
+    "volume_balance_m3_h": 4.440892098500626e-16,
+    "feed_osmotic_bar": 25.246497111484413
+  },
+  "A_m_h_bar": 0.0014274365216562594,
+  "B_m_h": 4.965791236034049e-05,
+  "mass_balance_error": 6.148696575366262e-17,
+  "warnings": [
+    "Manufacturer nominal calibration, not independent experimental validation",
+    "NaCl equivalent, constant density and osmotic coefficient; no boron/ion selectivity"
+  ],
+  "generated_at_utc": "2026-09-13T08:22:46.751597+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}
