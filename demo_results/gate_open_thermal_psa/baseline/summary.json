@@ -1,0 +1,62 @@
+{
+  "model_type": "gate_open_psa",
+  "backend": "reduced_order",
+  "solver": {
+    "termination": "success",
+    "method": "SciPy BDF",
+    "rtol": 1e-07,
+    "atol": 1e-10,
+    "max_step_s": 2.0
+  },
+  "components": [
+    "CO2",
+    "N2"
+  ],
+  "solid_mass_kg": 1.5,
+  "vessel_volume_l": 1.6666666666666667,
+  "equilibrium_working_capacity_mol": 2.6099794542200137,
+  "css_converged": true,
+  "cycles_run": 5,
+  "mass_balance_error": 1.803634156496937e-12,
+  "purity": 0.9023378294072598,
+  "recovery": 0.18099034488108282,
+  "co2_product_mol": 0.8151505934146357,
+  "net_co2_released_mol": 0.8151505934146357,
+  "feed_co2_in_mol": 4.503834687702369,
+  "energy_balance_error_j": -1.8534501577960327e-07,
+  "working_capacity_cm3_stp_g": 12.149650732359241,
+  "mass_balance_error_mol": 1.803634156496937e-12,
+  "css_state_delta": 9.47516347759561e-08,
+  "end_co2_partial_kpa": 4.919922932847601,
+  "end_open_fraction": 2.907298741691205e-27,
+  "assumptions": [
+    "STP is 273.15 K and 101325 Pa",
+    "1 L is solid envelope volume",
+    "rigid vessel with initial void fraction 0.4",
+    "no intrinsic gate hysteresis due to missing closing data",
+    "low-pressure uptake linear to zero below 5 kPa",
+    "N2 plateau above 5 kPa partial pressure",
+    "independent component equilibrium without competitive fitting",
+    "LDF and structural rates",
+    "valve conductance",
+    "cycle durations",
+    "effective heat per mole CO2 includes structural heat without double counting",
+    "isotropic expansion changes crystal diffusion length",
+    "10 um crystal reference length",
+    "15 kJ/mol diffusion activation energy",
+    "heat capacities and UA assumed",
+    "vanthoff temperature shift is an unvalidated closure using effective heat"
+  ],
+  "warnings": [
+    "Numerical scenario, not experimental validation or an IDAES unit model.",
+    "Valve pressure targets are approximate; inspect actual pressure profiles.",
+    "Effective thermal closure; no measured hysteresis, axial gradients, pump energy or competitive fit."
+  ],
+  "generated_at_utc": "2026-09-13T07:29:21.595164+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

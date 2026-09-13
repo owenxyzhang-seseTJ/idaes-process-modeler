@@ -15,6 +15,15 @@ Date: 2026-09-13
 - SVG outputs retain editable text; PDF outputs are single-page exports with TrueType font
   settings.
 - Raw YAML, CSV, and JSON result bundles remain separate from derived parameter CSV files.
+- `python scripts/render_reports.py`: passed; the main technical report rendered to a
+  seven-page PDF and its figure plan, method-search packet, and QA report each rendered to
+  one-page PDFs.
+- The report contact sheet and representative page PNGs were inspected after PDF rendering;
+  formulas, Chinese text, tables, embedded figures, and the Aspen-like flowchart were
+  legible with no visible right-edge clipping.
+- The PDF wrapper uses XeLaTeX with a Unicode-capable text font, explicit Markdown math
+  extensions, and a maximum-width table wrapper. Temporary TeX files are removed; the
+  committed render manifest contains repository-relative paths only.
 
 ## Scientific boundary
 

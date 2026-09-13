@@ -1,0 +1,59 @@
+{
+  "model_type": "gate_open_psa",
+  "backend": "reduced_order",
+  "solver": {
+    "termination": "success",
+    "method": "SciPy BDF",
+    "rtol": 1e-07,
+    "atol": 1e-10,
+    "max_step_s": 2.0
+  },
+  "components": [
+    "CO2",
+    "N2"
+  ],
+  "solid_mass_kg": 1.5,
+  "vessel_volume_l": 1.6666666666666667,
+  "equilibrium_working_capacity_mol": 2.6099794542200137,
+  "css_converged": true,
+  "cycles_run": 5,
+  "mass_balance_error": 5.364108462968531e-12,
+  "purity": 0.09675987388569349,
+  "recovery": 0.3450667523817249,
+  "co2_product_mol": 3.05280038571755,
+  "purge_co2_in_mol": 1.4999999999997264,
+  "net_co2_released_mol": 1.5528003857178234,
+  "purge_total_in_mol": 30.00000000000271,
+  "feed_co2_in_mol": 4.500000000000178,
+  "working_capacity_cm3_stp_g": 23.18472014386251,
+  "mass_balance_error_mol": 5.364108462968531e-12,
+  "css_state_delta": 9.083034866776141e-07,
+  "end_co2_partial_kpa": 5.602417344351501,
+  "end_open_fraction": 6.490451870759401e-08,
+  "assumptions": [
+    "298 K isothermal",
+    "STP is 273.15 K and 101325 Pa",
+    "1 L is solid envelope volume",
+    "rigid vessel with initial void fraction 0.4",
+    "no gate hysteresis due to missing closing data",
+    "low-pressure uptake linear to zero below 5 kPa",
+    "N2 plateau above 5 kPa partial pressure",
+    "independently prescribed component equilibrium without competitive fitting",
+    "LDF and structural rates",
+    "valve conductance",
+    "cycle durations",
+    "isobaric composition swing rather than vacuum PSA"
+  ],
+  "warnings": [
+    "Numerical scenario, not experimental validation or an IDAES unit model.",
+    "Valve pressure targets are approximate; inspect actual pressure profiles.",
+    "No gate hysteresis, heat balance, axial gradients, vacuum energy or competitive fit."
+  ],
+  "generated_at_utc": "2026-09-13T06:51:45.292736+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "max_component_balance_error_mol": 5.364108462968531e-12,
+  "net_release_refinement_relative_change": 4.428357680552608e-09,
+  "working_capacity_refinement_relative_change": 9.583553506331555e-09,
+  "css_baseline": true,
+  "css_refined": true,
+  "css_long_contact": true
+}

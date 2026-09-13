@@ -55,6 +55,7 @@ class ValidationReport:
 
 
 SUPPORTED_MODEL_TYPES = {
+    "gate_open_psa",
     "fixed_bed_adsorption",
     "psa",
     "vsa",
@@ -192,6 +193,15 @@ def validate_spec(source: Any) -> ValidationReport:
         spec = load_spec(source)
     except Exception as exc:
         report.error("spec", str(exc))
+        return report
+
+    if spec.model_type == 'gate_open_psa':
+        from .models.gate_open_psa import parameters
+        try:
+            parameters(spec)
+        except (ValueError, TypeError, KeyError, ZeroDivisionError) as exc:
+            report.error('gate_open_psa', str(exc))
+        report.warning('validation', 'Flexible-solid tank scenario; no experimental validation')
         return report
 
     if spec.model_type not in SUPPORTED_MODEL_TYPES:

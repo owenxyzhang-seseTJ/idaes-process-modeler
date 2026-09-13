@@ -1,0 +1,73 @@
+model_type: gate_open_psa
+components:
+- CO2
+- N2
+feed:
+  temperature: 298 K
+  pressure: 1 bar
+  composition:
+    CO2: 0.15
+    N2: 0.85
+  molar_flow: 0.05 mol/s
+purge:
+  pressure: 1 bar
+  composition:
+    CO2: 0.05
+    N2: 0.95
+  molar_flow: 0.05 mol/s
+material:
+  initial_volume: 1 L
+  density: 1.5 g/cm3
+  expansion_fraction: 0.05
+  co2_low_cm3_stp_g: 1
+  co2_high_cm3_stp_g: 40
+  n2_cm3_stp_g: 1
+  low_anchor_pressure: 5 kPa
+  gate_start: 10 kPa
+  gate_width: 1 kPa
+  gate_rate: 0.1 1/s
+  co2_ldf: 0.02 1/s
+  n2_ldf: 0.05 1/s
+bed:
+  initial_void_fraction: 0.4
+cycle_settings:
+  low_pressure: 1 bar
+  max_cycles: 50
+  css_tolerance: 1.0e-06
+cycle:
+- name: adsorption
+  duration: 600 s
+- name: purge
+  duration: 600 s
+numerics:
+  rtol: 1.0e-09
+  atol: 1.0e-12
+  max_step: 0.5 s
+  output_interval: 2 s
+  valve_conductance_mol_s_pa: 0.001
+provenance:
+  user_required:
+  - initial_volume
+  - density
+  - expansion_fraction
+  - co2_low_cm3_stp_g
+  - co2_high_cm3_stp_g
+  - n2_cm3_stp_g
+  - gate_start
+  - gate_width
+  - feed.composition
+  - feed.pressure
+  - purge.composition
+  assumptions:
+  - 298 K isothermal
+  - STP is 273.15 K and 101325 Pa
+  - 1 L is solid envelope volume
+  - rigid vessel with initial void fraction 0.4
+  - no gate hysteresis due to missing closing data
+  - low-pressure uptake linear to zero below 5 kPa
+  - N2 plateau above 5 kPa partial pressure
+  - independently prescribed component equilibrium without competitive fitting
+  - LDF and structural rates
+  - valve conductance
+  - cycle durations
+  - isobaric composition swing rather than vacuum PSA

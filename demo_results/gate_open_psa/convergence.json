@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "cycle": 1,
+      "purity": 0.09639904088318067,
+      "recovery": 0.3422669270849161,
+      "co2_product_mol": 3.040201171872436,
+      "purge_co2_in_mol": 1.4999999999999751,
+      "net_co2_released_mol": 1.5402011718724609,
+      "purge_total_in_mol": 29.999999999999712,
+      "feed_co2_in_mol": 4.499999999971772,
+      "working_capacity_cm3_stp_g": 23.210725790614887,
+      "mass_balance_error_mol": 1.546540673302843e-13,
+      "css_state_delta": null,
+      "end_co2_partial_kpa": 5.550962320613881,
+      "end_open_fraction": 4.133942034380432e-08
+    },
+    {
+      "cycle": 2,
+      "purity": 0.0967211865746135,
+      "recovery": 0.34474939717814307,
+      "co2_product_mol": 3.051449051684033,
+      "purge_co2_in_mol": 1.500000000000199,
+      "net_co2_released_mol": 1.551449051683834,
+      "purge_total_in_mol": 29.999999999999844,
+      "feed_co2_in_mol": 4.500222667197734,
+      "working_capacity_cm3_stp_g": 23.201437223534523,
+      "mass_balance_error_mol": 1.5802359421002166e-12,
+      "css_state_delta": 0.0012294472543928833,
+      "end_co2_partial_kpa": 5.5966555331277785,
+      "end_open_fraction": 6.18277846067605e-08
+    },
+    {
+      "cycle": 3,
+      "purity": 0.09674903301334789,
+      "recovery": 0.34496391225234607,
+      "co2_product_mol": 3.052421706093634,
+      "purge_co2_in_mol": 1.4999999999997087,
+      "net_co2_released_mol": 1.5524217060939254,
+      "purge_total_in_mol": 29.99999999999951,
+      "feed_co2_in_mol": 4.500243796395452,
+      "working_capacity_cm3_stp_g": 23.199418084908295,
+      "mass_balance_error_mol": 6.949545106049726e-13,
+      "css_state_delta": 0.00011145911631160483,
+      "end_co2_partial_kpa": 5.600797984343517,
+      "end_open_fraction": 6.402769699077624e-08
+    },
+    {
+      "cycle": 4,
+      "purity": 0.09675155817301753,
+      "recovery": 0.3449833678143753,
+      "co2_product_mol": 3.0525099109529386,
+      "purge_co2_in_mol": 1.4999999999997726,
+      "net_co2_released_mol": 1.552509910953166,
+      "purge_total_in_mol": 29.999999999999375,
+      "feed_co2_in_mol": 4.500245680796191,
+      "working_capacity_cm3_stp_g": 23.199167519458463,
+      "mass_balance_error_mol": 1.3108437946218743e-12,
+      "css_state_delta": 1.014081836021169e-05,
+      "end_co2_partial_kpa": 5.601174874515178,
+      "end_open_fraction": 6.423057244316594e-08
+    },
+    {
+      "cycle": 5,
+      "purity": 0.09675178825556989,
+      "recovery": 0.34498514041164774,
+      "co2_product_mol": 3.052517947824118,
+      "purge_co2_in_mol": 1.4999999999997442,
+      "net_co2_released_mol": 1.5525179478243736,
+      "purge_total_in_mol": 30.00000000000324,
+      "feed_co2_in_mol": 4.500245853986225,
+      "working_capacity_cm3_stp_g": 23.199144266328528,
+      "mass_balance_error_mol": 6.01028948832294e-12,
+      "css_state_delta": 8.926596573900769e-07,
+      "end_co2_partial_kpa": 5.601208050797616,
+      "end_open_fraction": 6.424903317822298e-08
+    }
+  ]
+}

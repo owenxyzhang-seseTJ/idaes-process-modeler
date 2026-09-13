@@ -1,0 +1,82 @@
+model_type: gate_open_psa
+components:
+- CO2
+- N2
+feed:
+  temperature: 298 K
+  pressure: 1 bar
+  composition:
+    CO2: 0.15
+    N2: 0.85
+  molar_flow: 0.05 mol/s
+material:
+  initial_volume: 1 L
+  density: 1.5 g/cm3
+  expansion_fraction: 0.05
+  co2_low_cm3_stp_g: 1
+  co2_high_cm3_stp_g: 40
+  n2_cm3_stp_g: 1
+  low_anchor_pressure: 5 kPa
+  gate_start: 10 kPa
+  gate_width: 1 kPa
+  gate_rate: 0.1 1/s
+  co2_ldf: 0.02 1/s
+  n2_ldf: 0.05 1/s
+  crystal_length: 10 um
+  diffusion_activation_energy: 15 kJ/mol
+thermal:
+  effective_binding_energy: 40 kJ/mol
+  solid_heat_capacity_j_kg_k: 1000
+  wall_heat_capacity_j_k: 500
+  gas_cv_j_mol_k: 25
+  ua_w_k: 10
+  ambient_temperature: 298 K
+  gate_temperature_shift: false
+bed:
+  initial_void_fraction: 0.4
+cycle_settings:
+  low_pressure: 5 kPa
+  max_cycles: 50
+  css_tolerance: 1.0e-06
+cycle:
+- name: adsorption
+  duration: 600 s
+- name: evacuation
+  duration: 600 s
+numerics:
+  rtol: 1.0e-07
+  atol: 1.0e-10
+  max_step: 2 s
+  output_interval: 2 s
+  valve_conductance_mol_s_pa: 0.001
+provenance:
+  user_required:
+  - initial_volume
+  - density
+  - expansion_fraction
+  - co2_low_cm3_stp_g
+  - co2_high_cm3_stp_g
+  - n2_cm3_stp_g
+  - gate_start
+  - gate_width
+  - feed.composition
+  - feed.pressure
+  - cycle_settings.low_pressure
+  - thermal.effective_binding_energy
+  assumptions:
+  - STP is 273.15 K and 101325 Pa
+  - 1 L is solid envelope volume
+  - rigid vessel with initial void fraction 0.4
+  - no intrinsic gate hysteresis due to missing closing data
+  - low-pressure uptake linear to zero below 5 kPa
+  - N2 plateau above 5 kPa partial pressure
+  - independent component equilibrium without competitive fitting
+  - LDF and structural rates
+  - valve conductance
+  - cycle durations
+  - effective heat per mole CO2 includes structural heat without double counting
+  - isotropic expansion changes crystal diffusion length
+  - 10 um crystal reference length
+  - 15 kJ/mol diffusion activation energy
+  - heat capacities and UA assumed
+  - vanthoff temperature shift is an unvalidated closure using effective heat

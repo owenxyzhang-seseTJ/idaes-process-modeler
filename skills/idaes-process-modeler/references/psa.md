@@ -21,3 +21,16 @@ The bundled PSA runner is a lumped-bed reduced-order map. It is useful for
 cycle-schema tests, initialization, and sensitivity scaffolding. It does not
 resolve axial gradients, thermal fronts, valve transients, or inter-bed timing.
 Use a distributed IDAES/Pyomo.DAE model for claims that require those effects.
+
+## Flexible MOF gate-open extension
+
+Use `assets/templates/gate_open_psa.yaml` and model type `gate_open_psa` for the
+binary nonisothermal mixed-tank extension. `scripts/run_gate_open_demo.py`
+generates the full report and sensitivity cases. This is a SciPy reduced-order
+route, not an IDAES unit. Total and component partial pressure are distinct;
+gas composition must evolve during closed-feed evacuation. Crystal expansion
+changes gas void volume and diffusion distance at fixed adsorbent mass.
+The effective heat basis is per mole CO2 and includes structural effects;
+do not add a duplicate phase heat. Unknown gate hysteresis and temperature
+dependence require explicit assumptions and sensitivity checks. Reject claims
+of physical validation from CSS or equation balance alone.

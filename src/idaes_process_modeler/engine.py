@@ -31,7 +31,10 @@ def run_model(source: Any, *, backend: str = "reduced_order") -> Dict[str, Any]:
             "Use idaes_process_modeler.idaes_adapter.build_fixed_bed_dae for the explicit IDAES/Pyomo.DAE path; "
             "the CLI reduced-order runners will not silently substitute it."
         )
-    if spec.model_type == "fixed_bed_adsorption":
+    if spec.model_type == "gate_open_psa":
+        from .models.gate_open_psa import run_gate_open
+        result = run_gate_open(spec, backend=backend)
+    elif spec.model_type == "fixed_bed_adsorption":
         result = run_fixed_bed(spec, backend=backend)
     elif spec.model_type in {"psa", "vsa", "tsa"}:
         result = run_psa(spec, backend=backend)

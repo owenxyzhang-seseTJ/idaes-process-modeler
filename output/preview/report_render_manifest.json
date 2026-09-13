@@ -1,0 +1,105 @@
+{
+  "renderer": "XeLaTeX + markdown.sty + ctexart",
+  "page_renderer": "pdftoppm",
+  "reports": [
+    {
+      "source": "demo_results/technical_report/demo_technical_report.md",
+      "pdf": "output/pdf/reports/demo_technical_report.pdf",
+      "preview_dir": "output/preview/reports/demo_technical_report",
+      "pages": 7,
+      "text_characters": 4909,
+      "pdf_bytes": 1307352,
+      "page_files": [
+        "output/preview/reports/demo_technical_report/page-1.png",
+        "output/preview/reports/demo_technical_report/page-2.png",
+        "output/preview/reports/demo_technical_report/page-3.png",
+        "output/preview/reports/demo_technical_report/page-4.png",
+        "output/preview/reports/demo_technical_report/page-5.png",
+        "output/preview/reports/demo_technical_report/page-6.png",
+        "output/preview/reports/demo_technical_report/page-7.png"
+      ]
+    },
+    {
+      "source": "demo_results/gate_open_thermal_psa/report.md",
+      "pdf": "output/pdf/reports/gate_open_thermal_psa_report.pdf",
+      "preview_dir": "output/preview/reports/gate_open_thermal_psa_report",
+      "pages": 5,
+      "text_characters": 3305,
+      "pdf_bytes": 525453,
+      "page_files": [
+        "output/preview/reports/gate_open_thermal_psa_report/page-1.png",
+        "output/preview/reports/gate_open_thermal_psa_report/page-2.png",
+        "output/preview/reports/gate_open_thermal_psa_report/page-3.png",
+        "output/preview/reports/gate_open_thermal_psa_report/page-4.png",
+        "output/preview/reports/gate_open_thermal_psa_report/page-5.png"
+      ]
+    },
+    {
+      "source": "demo_results/technical_report/figure_plan.md",
+      "pdf": "output/pdf/reports/technical_report_figure_plan.pdf",
+      "preview_dir": "output/preview/reports/technical_report_figure_plan",
+      "pages": 1,
+      "text_characters": 1584,
+      "pdf_bytes": 27959,
+      "page_files": [
+        "output/preview/reports/technical_report_figure_plan/page-1.png"
+      ]
+    },
+    {
+      "source": "demo_results/technical_report/method_search_packet.md",
+      "pdf": "output/pdf/reports/technical_report_method_search_packet.pdf",
+      "preview_dir": "output/preview/reports/technical_report_method_search_packet",
+      "pages": 1,
+      "text_characters": 1228,
+      "pdf_bytes": 29222,
+      "page_files": [
+        "output/preview/reports/technical_report_method_search_packet/page-1.png"
+      ]
+    },
+    {
+      "source": "demo_results/technical_report/qa_report.md",
+      "pdf": "output/pdf/reports/technical_report_qa_report.pdf",
+      "preview_dir": "output/preview/reports/technical_report_qa_report",
+      "pages": 1,
+      "text_characters": 1892,
+      "pdf_bytes": 29448,
+      "page_files": [
+        "output/preview/reports/technical_report_qa_report/page-1.png"
+      ]
+    },
+    {
+      "source": "demo_results/gate_open_thermal_psa/figure_plan.md",
+      "pdf": "output/pdf/reports/gate_open_thermal_psa_figure_plan.pdf",
+      "preview_dir": "output/preview/reports/gate_open_thermal_psa_figure_plan",
+      "pages": 1,
+      "text_characters": 809,
+      "pdf_bytes": 24801,
+      "page_files": [
+        "output/preview/reports/gate_open_thermal_psa_figure_plan/page-1.png"
+      ]
+    },
+    {
+      "source": "demo_results/gate_open_thermal_psa/method_search_packet.md",
+      "pdf": "output/pdf/reports/gate_open_thermal_psa_method_search_packet.pdf",
+      "preview_dir": "output/preview/reports/gate_open_thermal_psa_method_search_packet",
+      "pages": 1,
+      "text_characters": 2081,
+      "pdf_bytes": 83170,
+      "page_files": [
+        "output/preview/reports/gate_open_thermal_psa_method_search_packet/page-1.png"
+      ]
+    },
+    {
+      "source": "demo_results/gate_open_thermal_psa/qa_report.md",
+      "pdf": "output/pdf/reports/gate_open_thermal_psa_qa_report.pdf",
+      "preview_dir": "output/preview/reports/gate_open_thermal_psa_qa_report",
+      "pages": 1,
+      "text_characters": 1285,
+      "pdf_bytes": 27850,
+      "page_files": [
+        "output/preview/reports/gate_open_thermal_psa_qa_report/page-1.png"
+      ]
+    }
+  ],
+  "contact_sheet": "output/preview/report_contact_sheet.png"
+}
