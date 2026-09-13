@@ -1,0 +1,6 @@
+{
+  "kind": "time_integration",
+  "integrator": "BDF",
+  "success": true,
+  "message": "The solver successfully reached the end of the integration interval."
+}

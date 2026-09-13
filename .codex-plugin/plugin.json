@@ -1,0 +1,36 @@
+{
+  "name": "idaes-process-modeler",
+  "version": "0.1.0",
+  "description": "Auditable IDAES and Pyomo workflows for dynamic process models, adsorption cycles, membranes, reactors, validation, and optimization.",
+  "author": {
+    "name": "Local developer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "IDAES",
+    "Pyomo",
+    "process-modeling",
+    "adsorption",
+    "membranes",
+    "HPC"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "IDAES Process Modeler",
+    "shortDescription": "Auditable IDAES/Pyomo process modeling.",
+    "longDescription": "Build, validate, run, and revise reproducible chemical-process models from structured specifications, with optional IDAES/Pyomo.DAE integration and explicit reduced-order fallbacks.",
+    "developerName": "Local developer",
+    "category": "Science",
+    "capabilities": [
+      "Analyze",
+      "Write",
+      "Run"
+    ],
+    "defaultPrompt": [
+      "Build and audit a fixed-bed adsorption model from a YAML spec.",
+      "Run a four-step PSA demo and report CSS diagnostics.",
+      "Compare membrane separation purity and recovery across a sweep."
+    ],
+    "brandColor": "#176B87"
+  }
+}

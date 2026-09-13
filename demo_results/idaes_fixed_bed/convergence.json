@@ -1,0 +1,10 @@
+{
+  "kind": "pyomo_dae_discretization",
+  "time_elements": 2,
+  "space_elements": 4,
+  "solver": {
+    "termination": "optimal",
+    "status": "ok",
+    "solver": "ipopt"
+  }
+}

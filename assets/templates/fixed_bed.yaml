@@ -1,0 +1,51 @@
+model_type: fixed_bed_adsorption
+components: [CO2, N2]
+
+geometry:
+  length: "1 m"
+  diameter: "0.05 m"
+
+feed:
+  pressure: "5 bar"
+  temperature: "298 K"
+  molar_flow: "0.01 mol/s"
+  composition:
+    CO2: 0.15
+    N2: 0.85
+
+bed:
+  porosity: 0.40
+  particle_density: "1200 kg/m3"
+  particle_diameter: "2 mm"
+  superficial_velocity: "0.01 m/s"
+  axial_dispersion: "1e-4 m2/s"
+
+adsorption:
+  equilibrium_model: dual_site_langmuir
+  kinetic_model: LDF
+  parameters:
+    CO2:
+      qs1: "1.4 mol/kg"
+      b1: "2e-5 1/Pa"
+      qs2: "1.0 mol/kg"
+      b2: "2e-6 1/Pa"
+    N2:
+      qs1: "0.45 mol/kg"
+      b1: "3e-6 1/Pa"
+      qs2: "0.25 mol/kg"
+      b2: "5e-7 1/Pa"
+  kinetic_parameters:
+    CO2: {k: "0.01 1/s"}
+    N2: {k: "0.008 1/s"}
+
+numerics:
+  spatial_elements: 20
+  time_horizon: "6000 s"
+  time_step: "50 s"
+  integrator: BDF
+  rtol: 1e-5
+  atol: 1e-8
+
+analysis:
+  breakthrough_component: CO2
+  breakthrough_fraction: 0.05

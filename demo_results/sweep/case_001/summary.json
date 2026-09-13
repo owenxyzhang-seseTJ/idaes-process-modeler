@@ -1,0 +1,40 @@
+{
+  "model_type": "fixed_bed_adsorption",
+  "backend": "reduced_order",
+  "solver": {
+    "termination": "success",
+    "message": "The solver successfully reached the end of the integration interval."
+  },
+  "components": [
+    "CO2",
+    "N2"
+  ],
+  "spatial_elements": 20,
+  "time_points": 121,
+  "breakthrough_component": "CO2",
+  "breakthrough_time_s": 3750.0,
+  "final_outlet_target_fraction": 0.9856729416914655,
+  "mass_balance_error": 1.4713146101705664e-05,
+  "pressure_drop_pa": 20.184528763059394,
+  "final_outlet_mole_fraction": {
+    "CO2": 0.1478509412537198,
+    "N2": 0.8521490587462801
+  },
+  "assumptions": [
+    "superficial velocity computed from ideal-gas feed flow and cross-sectional area",
+    "axial dispersion defaulted to 1e-4 m2/s",
+    "particle diameter defaulted to 2 mm for Ergun diagnostic",
+    "gas viscosity defaulted to 1.8e-5 Pa s in Ergun diagnostic"
+  ],
+  "warnings": [
+    "reduced-order constant-pressure concentration model; Ergun pressure profile is diagnostic, not coupled",
+    "results are not experimental validation or a benchmark against Aspen/IDAES"
+  ],
+  "generated_at_utc": "2026-09-13T04:32:27.130137+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

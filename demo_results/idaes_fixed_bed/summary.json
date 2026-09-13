@@ -1,0 +1,28 @@
+{
+  "model_type": "fixed_bed_adsorption",
+  "backend": "pyomo_dae_idaes",
+  "solver": {
+    "termination": "optimal",
+    "status": "ok",
+    "solver": "ipopt"
+  },
+  "components": [
+    "CO2",
+    "N2"
+  ],
+  "time_elements": 2,
+  "space_elements": 4,
+  "degrees_of_freedom_after_discretization": 0,
+  "max_constraint_residual": 2.3202830932642082e-11,
+  "warnings": [
+    "reference builder uses ideal-gas, constant-pressure/temperature equations",
+    "this solve is an API/numerical smoke result, not experimental validation"
+  ],
+  "generated_at_utc": "2026-09-13T04:31:05.592502+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

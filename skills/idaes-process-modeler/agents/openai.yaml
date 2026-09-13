@@ -1,0 +1,7 @@
+interface:
+  display_name: "IDAES Process Modeler"
+  short_description: "Build and audit IDAES process models."
+  default_prompt: "Use $idaes-process-modeler to build and audit an IDAES/Pyomo process model."
+
+policy:
+  allow_implicit_invocation: true

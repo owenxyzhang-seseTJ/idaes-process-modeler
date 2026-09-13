@@ -1,0 +1,65 @@
+model_type: psa
+components:
+- CO2
+- N2
+geometry:
+  length: 1 m
+  diameter: 0.05 m
+feed:
+  pressure: 5 bar
+  temperature: 298 K
+  molar_flow: 0.01 mol/s
+  composition:
+    CO2: 0.15
+    N2: 0.85
+bed:
+  porosity: 0.4
+  particle_density: 1200 kg/m3
+adsorption:
+  equilibrium_model: dual_site_langmuir
+  kinetic_model: LDF
+  parameters:
+    CO2:
+      qs1: 1.4 mol/kg
+      b1: 2e-5 1/Pa
+      qs2: 1.0 mol/kg
+      b2: 2e-6 1/Pa
+    N2:
+      qs1: 0.45 mol/kg
+      b1: 3e-6 1/Pa
+      qs2: 0.25 mol/kg
+      b2: 5e-7 1/Pa
+  kinetic_parameters:
+    CO2:
+      k: 0.02
+    N2:
+      k: 0.015
+cycle_settings:
+  high_pressure: 5 bar
+  low_pressure: 0.1 bar
+  max_cycles: 30
+  css_tolerance: 1e-4
+cycle:
+- name: pressurization
+  duration: 20 s
+  inlet: feed
+  outlet: closed
+- name: adsorption
+  duration: 100 s
+  inlet: feed
+  outlet: waste
+- name: counter-current blowdown
+  duration: 30 s
+  inlet: closed
+  outlet: product
+- name: purge
+  duration: 40 s
+  inlet: purge
+  outlet: waste
+purge:
+  composition:
+    CO2: 0.02
+    N2: 0.98
+analysis:
+  product_outlet: product
+  product_component: CO2

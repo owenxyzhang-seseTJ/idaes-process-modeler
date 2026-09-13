@@ -1,0 +1,28 @@
+{
+  "model_type": "membrane_reactor",
+  "backend": "reduced_order",
+  "solver": {
+    "termination": "success",
+    "message": "SciPy PFR-like integration"
+  },
+  "components": [
+    "A",
+    "B",
+    "H2"
+  ],
+  "conversion": 0.5506710264072818,
+  "reaction_rate_constant_s-1": 0.08,
+  "membrane_component": "H2",
+  "permeated_target_mol_s": 0.011656740735721717,
+  "warnings": [
+    "PFR-like reduced-order reactor; detailed IDAES thermodynamics and heat effects are not included",
+    "stoichiometric and kinetic parameters need independent validation"
+  ],
+  "generated_at_utc": "2026-09-13T04:31:04.416635+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

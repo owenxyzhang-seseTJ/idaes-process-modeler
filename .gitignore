@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+runs/*
+!runs/.gitkeep
+
+# Result snapshots are intentionally versioned for the reproducible demo report.
+# Runtime Slurm jobs are machine-specific and must not be published.
+demo_results/**/*.sbatch

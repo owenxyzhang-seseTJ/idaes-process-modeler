@@ -1,0 +1,41 @@
+{
+  "kind": "cyclic_steady_state",
+  "records": [
+    {
+      "cycle": 1,
+      "state_delta": null,
+      "tolerance": 0.0001,
+      "converged": false
+    },
+    {
+      "cycle": 2,
+      "state_delta": 0.009556455492273491,
+      "tolerance": 0.0001,
+      "converged": false
+    },
+    {
+      "cycle": 3,
+      "state_delta": 0.0023565929104377298,
+      "tolerance": 0.0001,
+      "converged": false
+    },
+    {
+      "cycle": 4,
+      "state_delta": 0.0005811286569602572,
+      "tolerance": 0.0001,
+      "converged": false
+    },
+    {
+      "cycle": 5,
+      "state_delta": 0.00014330456246586937,
+      "tolerance": 0.0001,
+      "converged": false
+    },
+    {
+      "cycle": 6,
+      "state_delta": 3.533847002305801e-05,
+      "tolerance": 0.0001,
+      "converged": true
+    }
+  ]
+}

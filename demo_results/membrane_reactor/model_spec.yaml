@@ -1,0 +1,40 @@
+model_type: membrane_reactor
+components:
+- A
+- B
+- H2
+geometry:
+  length: 2 m
+feed:
+  pressure: 5 bar
+  temperature: 573 K
+  molar_flow: 0.02 mol/s
+  composition:
+    A: 0.9
+    B: 0.05
+    H2: 0.05
+reaction:
+  stoichiometry:
+    A: -1
+    B: 1
+    H2: 1
+  rate_component: A
+  pre_exponential: 0.08 1/s
+  activation_energy: 20 kJ/mol
+  reference_temperature: 573 K
+  residence_velocity: 0.2 m/s
+membrane:
+  area: 2 m2
+  permeate_pressure: 0.05 bar
+  membrane_component: H2
+  permeance:
+    A: 1e-9 mol/(m2*s*Pa)
+    B: 1e-9 mol/(m2*s*Pa)
+    H2: 2e-6 mol/(m2*s*Pa)
+  sweep_flow: 0.001 mol/s
+  sweep_composition:
+    A: 0.0
+    B: 0.0
+    H2: 1.0
+numerics:
+  spatial_elements: 40

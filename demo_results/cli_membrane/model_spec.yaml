@@ -1,0 +1,23 @@
+model_type: membrane_separation
+components:
+- CO2
+- CH4
+feed:
+  pressure: 10 bar
+  temperature: 298 K
+  molar_flow: 0.01 mol/s
+  composition:
+    CO2: 0.4
+    CH4: 0.6
+membrane:
+  mode: co_current
+  length: 10 m
+  area: 1 m2
+  permeate_pressure: 0.2 bar
+  permeance:
+    CO2: 5e-9 mol/(m2*s*Pa)
+    CH4: 5e-10 mol/(m2*s*Pa)
+numerics:
+  spatial_elements: 50
+analysis:
+  product_component: CO2

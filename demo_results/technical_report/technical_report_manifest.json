@@ -1,0 +1,35 @@
+{
+  "report": "demo_technical_report.md",
+  "figures": {
+    "process_flow": [
+      "process_flow_aspen_like.png",
+      "process_flow_aspen_like.svg",
+      "process_flow_aspen_like.pdf"
+    ],
+    "initial_parameters": [
+      "initial_parameters_isotherm_kinetics.png",
+      "initial_parameters_isotherm_kinetics.svg",
+      "initial_parameters_isotherm_kinetics.pdf"
+    ],
+    "validation": [
+      "validation_evidence.png",
+      "validation_evidence.svg",
+      "validation_evidence.pdf"
+    ]
+  },
+  "parameter_values": {
+    "operating_partial_pressure_pa": {
+      "CO2": 75000.0,
+      "N2": 425000.0
+    },
+    "q_operating_mol_kg": {
+      "CO2": 0.9704347826086958,
+      "N2": 0.29601223518749287
+    },
+    "membrane_selectivity": [
+      10.0,
+      1999.9999999999998,
+      1999.9999999999998
+    ]
+  }
+}

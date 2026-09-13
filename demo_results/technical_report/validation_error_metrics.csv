@@ -1,0 +1,4 @@
+check,value
+fixed_bed_mass_balance,1.2850704365289841e-05
+membrane_mass_balance,9.999986949615902e-11
+idaes_constraint_residual,2.3202830932642082e-11

@@ -1,0 +1,24 @@
+{
+  "kind": "spatial_mesh_convergence",
+  "metric": "breakthrough_time_s",
+  "tolerance": 0.1,
+  "records": [
+    {
+      "spatial_elements": 20,
+      "value": 1750.0
+    },
+    {
+      "spatial_elements": 40,
+      "value": 1900.0
+    }
+  ],
+  "differences": [
+    {
+      "from": 20,
+      "to": 40,
+      "relative_change": 0.07894736842105263
+    }
+  ],
+  "converged": true,
+  "interpretation": "numerical discretization evidence only; not physical validation"
+}

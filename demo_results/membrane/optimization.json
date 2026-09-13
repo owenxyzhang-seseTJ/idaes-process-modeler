@@ -1,0 +1,126 @@
+{
+  "solver": "cbc",
+  "termination": "optimal",
+  "objective": "recovery",
+  "constraints": {
+    "purity": {
+      "lower": 0.6
+    }
+  },
+  "selected_index": 2,
+  "selected": {
+    "parameter_value": 1.0,
+    "model_type": "membrane_separation",
+    "backend": "reduced_order",
+    "solver": {
+      "termination": "success",
+      "message": "SciPy method-of-lines integration"
+    },
+    "mode": "co_current",
+    "components": [
+      "CO2",
+      "CH4"
+    ],
+    "purity": 0.8353978484750341,
+    "recovery": 0.4124100829867193,
+    "stage_cut": 0.19746762993921893,
+    "mass_balance_error": 9.999986949615902e-11,
+    "target_component": "CO2",
+    "membrane_area_m2": 1.0,
+    "pressure_ratio": 50.0,
+    "assumptions": [
+      "co-current permeate stream is initialized with a negligible seed flow"
+    ],
+    "warnings": [
+      "constant-pressure ideal-gas membrane model; concentration-polarization and module pressure drop are omitted",
+      "permeance and reaction/property parameters require independent experimental or literature support"
+    ]
+  },
+  "candidates": [
+    {
+      "parameter_value": 0.2,
+      "model_type": "membrane_separation",
+      "backend": "reduced_order",
+      "solver": {
+        "termination": "success",
+        "message": "SciPy method-of-lines integration"
+      },
+      "mode": "co_current",
+      "components": [
+        "CO2",
+        "CH4"
+      ],
+      "purity": 0.8597202985239519,
+      "recovery": 0.09309607191829743,
+      "stage_cut": 0.043314585954587065,
+      "mass_balance_error": 9.999982883857755e-11,
+      "target_component": "CO2",
+      "membrane_area_m2": 0.2,
+      "pressure_ratio": 50.0,
+      "assumptions": [
+        "co-current permeate stream is initialized with a negligible seed flow"
+      ],
+      "warnings": [
+        "constant-pressure ideal-gas membrane model; concentration-polarization and module pressure drop are omitted",
+        "permeance and reaction/property parameters require independent experimental or literature support"
+      ]
+    },
+    {
+      "parameter_value": 0.5,
+      "model_type": "membrane_separation",
+      "backend": "reduced_order",
+      "solver": {
+        "termination": "success",
+        "message": "SciPy method-of-lines integration"
+      },
+      "mode": "co_current",
+      "components": [
+        "CO2",
+        "CH4"
+      ],
+      "purity": 0.8512204243927307,
+      "recovery": 0.22290248167447743,
+      "stage_cut": 0.10474489346681187,
+      "mass_balance_error": 9.999984239110471e-11,
+      "target_component": "CO2",
+      "membrane_area_m2": 0.5,
+      "pressure_ratio": 50.0,
+      "assumptions": [
+        "co-current permeate stream is initialized with a negligible seed flow"
+      ],
+      "warnings": [
+        "constant-pressure ideal-gas membrane model; concentration-polarization and module pressure drop are omitted",
+        "permeance and reaction/property parameters require independent experimental or literature support"
+      ]
+    },
+    {
+      "parameter_value": 1.0,
+      "model_type": "membrane_separation",
+      "backend": "reduced_order",
+      "solver": {
+        "termination": "success",
+        "message": "SciPy method-of-lines integration"
+      },
+      "mode": "co_current",
+      "components": [
+        "CO2",
+        "CH4"
+      ],
+      "purity": 0.8353978484750341,
+      "recovery": 0.4124100829867193,
+      "stage_cut": 0.19746762993921893,
+      "mass_balance_error": 9.999986949615902e-11,
+      "target_component": "CO2",
+      "membrane_area_m2": 1.0,
+      "pressure_ratio": 50.0,
+      "assumptions": [
+        "co-current permeate stream is initialized with a negligible seed flow"
+      ],
+      "warnings": [
+        "constant-pressure ideal-gas membrane model; concentration-polarization and module pressure drop are omitted",
+        "permeance and reaction/property parameters require independent experimental or literature support"
+      ]
+    }
+  ],
+  "interpretation": "Pyomo MILP selection over precomputed simulations; not continuous equation-oriented optimization"
+}

@@ -1,0 +1,36 @@
+{
+  "model_type": "psa",
+  "backend": "reduced_order",
+  "solver": {
+    "termination": "not_applicable",
+    "message": "explicit reduced-order cycle map"
+  },
+  "components": [
+    "CO2",
+    "N2"
+  ],
+  "cycles_run": 6,
+  "css_converged": true,
+  "css_tolerance": 0.0001,
+  "purity": 0.35637057133665356,
+  "recovery": 0.6995039412390027,
+  "productivity_mol_kg_s": 0.0005502631895553055,
+  "energy_consumption_j": 769.6902001294995,
+  "product_component": "CO2",
+  "assumptions": [
+    "single-bed lumped cyclic map; distributed axial gradients are not represented",
+    "ideal-gas bed void inventory and approximate pressure-work energy are used",
+    "cycle metrics are backend outputs, not experimental or literature validation"
+  ],
+  "warnings": [
+    "This cycle map does not resolve axial concentration, temperature, or pressure profiles.",
+    "CSS convergence of a reduced-order map is not proof of a validated PSA model."
+  ],
+  "generated_at_utc": "2026-09-13T04:31:04.418760+00:00",
+  "post_solve_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  }
+}

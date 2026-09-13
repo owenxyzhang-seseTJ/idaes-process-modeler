@@ -1,0 +1,34 @@
+{
+  "demo_results_overview": [
+    "demo_results_overview.png",
+    "demo_results_overview.svg",
+    "demo_results_overview.pdf"
+  ],
+  "single_figures": {
+    "fixed_bed": [
+      "fixed_bed_breakthrough.png",
+      "fixed_bed_breakthrough.svg",
+      "fixed_bed_breakthrough.pdf"
+    ],
+    "psa": [
+      "psa_performance_detail.png",
+      "psa_performance_detail.svg",
+      "psa_performance_detail.pdf"
+    ],
+    "membrane": [
+      "membrane_profiles_detail.png",
+      "membrane_profiles_detail.svg",
+      "membrane_profiles_detail.pdf"
+    ],
+    "membrane_reactor": [
+      "membrane_reactor_detail.png",
+      "membrane_reactor_detail.svg",
+      "membrane_reactor_detail.pdf"
+    ],
+    "idaes_fixed_bed": [
+      "idaes_reference_breakthrough.png",
+      "idaes_reference_breakthrough.svg",
+      "idaes_reference_breakthrough.pdf"
+    ]
+  }
+}
