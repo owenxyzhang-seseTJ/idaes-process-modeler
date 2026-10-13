@@ -1,11 +1,32 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "idaes-process-modeler"
 version = "0.1.0"
 description = "Auditable IDAES/Pyomo-oriented chemical process modeling workflows."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Xiaoyu Zhang", email = "owenxyzhang@gmail.com" }]
+keywords = [
+  "IDAES", "Pyomo", "process-modeling", "adsorption", "PSA", "VSA", "TSA",
+  "membrane-separation", "parameter-estimation", "chemical-engineering",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Physics",
+]
 requires-python = ">=3.9"
 dependencies = [
   "numpy>=1.22",
@@ -24,6 +45,12 @@ all = ["pytest>=7.0", "pyomo>=6.7", "idaes-pse>=2.8"]
 
 [project.scripts]
 idaes-model = "idaes_process_modeler.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/owenxyzhang-seseTJ/idaes-process-modeler"
+Repository = "https://github.com/owenxyzhang-seseTJ/idaes-process-modeler"
+Issues = "https://github.com/owenxyzhang-seseTJ/idaes-process-modeler/issues"
+Changelog = "https://github.com/owenxyzhang-seseTJ/idaes-process-modeler/releases"
 
 [tool.setuptools.packages.find]
 where = ["src"]

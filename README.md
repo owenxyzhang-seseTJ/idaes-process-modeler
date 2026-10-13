@@ -22,10 +22,38 @@ without matching measurements or a benchmark.
 
 ## Installation and first check / 安装与首次检查
 
-Create the recommended Conda environment and install IDAES extensions before
-constructing a process model:
+Install the package from PyPI:
 
-先建立推荐的 Conda 环境，并在建模前安装 IDAES 扩展：
+从 PyPI 安装：
+
+```bash
+python -m pip install idaes-process-modeler
+idaes-model --help
+```
+
+The default install covers the reduced-order models and reporting helpers. Add
+the `[idaes]` extra to pull in Pyomo and IDAES itself:
+
+默认安装包含 reduced-order 模型和报告工具；需要 Pyomo、IDAES 本体时加装 `[idaes]` extra：
+
+```bash
+python -m pip install "idaes-process-modeler[idaes]"
+```
+
+To work from the repository instead, clone it and install in editable mode:
+
+要在仓库中开发，克隆后以 editable 方式安装：
+
+```bash
+git clone https://github.com/owenxyzhang-seseTJ/idaes-process-modeler.git
+cd idaes-process-modeler
+python -m pip install -e '.[test]'
+```
+
+The numerical cases need IDAES extensions and a solver. Create the recommended
+Conda environment before constructing a process model:
+
+数值算例需要 IDAES 扩展和求解器。建模前先建立推荐的 Conda 环境：
 
 ```bash
 conda env create -f environment.yml
